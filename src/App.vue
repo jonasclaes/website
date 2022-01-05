@@ -2,11 +2,11 @@
   <div class="min-h-screen h-full w-full flex flex-col">
     <div class="bg-transparent text-white z-10 absolute top-0 w-full">
       <div class="container mx-auto">
-        <div class="max-w-6xl mx-auto flex justify-between p-4">
+        <div class="mx-auto flex justify-between p-4">
           <div class="flex items-center h-full space-x-2">
             <span class="font-semibold">jonasclaes.be</span>
           </div>
-          <div class="hidden sm:flex space-x-3">
+          <div class="flex space-x-3">
             <router-link
               v-for="navbarLink in navbarLinks"
               :key="navbarLink.name"
