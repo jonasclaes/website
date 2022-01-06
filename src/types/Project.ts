@@ -1,4 +1,7 @@
 export type Project = {
+  // The URL slug of the project.
+  slug: string;
+
   // The name of the project.
   name: string;
 

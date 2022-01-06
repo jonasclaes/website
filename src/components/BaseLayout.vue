@@ -16,18 +16,18 @@
       </div>
     </div>
     <slot></slot>
-    <Footer></Footer>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, Ref, ref, watch } from "vue";
-import Footer from "@/components/Footer.vue";
 import { useRoute } from "vue-router";
+import FooterComponent from "./FooterComponent.vue";
 
 export default defineComponent({
   name: "BaseLayout",
-  components: { Footer },
+  components: { FooterComponent },
   setup() {
     const route = useRoute();
 

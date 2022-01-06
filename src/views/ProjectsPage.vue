@@ -24,12 +24,15 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
               <template v-if="projects.length">
                 <div
+                  @click="openProject(project.slug)"
                   v-for="project in projects"
                   :key="project.name"
-                  class="bg-gray-800 text-white rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-110"
+                  class="bg-gray-800 text-white rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-110 cursor-pointer"
                 >
                   <img
-                    :src="project.cover"
+                    :src="
+                      project.cover || 'https://via.placeholder.com/400x200'
+                    "
                     :alt="project.name"
                     class="rounded-t-lg w-full"
                   />
@@ -64,35 +67,27 @@ import { defineComponent, ref, Ref } from "vue";
 import { ArrowDownIcon } from "@heroicons/vue/solid";
 import BaseLayout from "@/components/BaseLayout.vue";
 import { Projects } from "@/types/Projects";
+import { useRouter } from "vue-router";
+import data from "@/data";
 
 export default defineComponent({
-  name: "Projects",
+  name: "ProjectsPage",
   title: "Projects",
   components: {
     ArrowDownIcon,
     BaseLayout,
   },
   setup() {
-    const projects: Ref<Projects> = ref([
-      {
-        name: "Test",
-        description: "Abcdefghijklmnopqrstuvwxyz",
-        cover: "https://via.placeholder.com/400x200",
-      },
-      {
-        name: "Test",
-        description: "Abcdefghijklmnopqrstuvwxyz",
-        cover: "https://via.placeholder.com/400x200",
-      },
-      {
-        name: "Test",
-        description: "Abcdefghijklmnopqrstuvwxyz",
-        cover: "https://via.placeholder.com/400x200",
-      },
-    ]);
+    const router = useRouter();
+    const projects: Ref<Projects> = ref(data.projects);
+
+    const openProject = (slug: string) => {
+      router.push(`/projects/${slug}`);
+    };
 
     return {
       projects,
+      openProject,
     };
   },
 });

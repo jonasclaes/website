@@ -21,7 +21,7 @@ import { defineComponent } from "vue";
 import BaseLayout from "@/components/BaseLayout.vue";
 
 export default defineComponent({
-  name: "Home",
+  name: "HomePage",
   title: "Home",
   components: { BaseLayout },
 });
