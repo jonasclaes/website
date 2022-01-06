@@ -1,12 +1,12 @@
 <template>
-  <BaseLayout>
+  <BaseLayout :halfHeight="true">
     <template v-slot:landing>
       <div class="flex flex-col text-center">
         <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold">Projects</h1>
         <p class="text-xl md:text-2xl lg:text-3xl italic">
           All of the projects I've made
         </p>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center md:hidden">
           <a
             href="#projects"
             class="bg-white animate-bounce rounded-full p-3 inline-flex mt-10"
@@ -20,7 +20,7 @@
     <template v-slot:content>
       <div>
         <div class="container mx-auto">
-          <div class="mx-auto px-4 mb-8" id="projects">
+          <div class="mx-auto px-4 mb-8 pt-8 md:pt-0" id="projects">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
               <template v-if="projects.length">
                 <div

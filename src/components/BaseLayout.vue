@@ -2,12 +2,20 @@
   <div>
     <div
       class="min-h-screen h-full w-full text-white overflow-y-hidden"
-      :class="{ 'bg-cogs': background === 0, 'bg-pcb': background === 1 }"
+      :class="{
+        'bg-cogs': background === 0,
+        'bg-pcb': background === 1,
+      }"
     >
       <div class="container mx-auto">
         <div class="mx-auto px-4">
           <div
-            class="h-screen flex flex-col sm:flex-row-reverse space-y-10 sm:space-x-reverse sm:space-x-10 sm:space-y-0 lg:space-x-reverse lg:space-x-20 justify-center items-center p-4"
+            class="flex flex-col sm:flex-row-reverse space-y-10 sm:space-x-reverse sm:space-x-10 sm:space-y-0 lg:space-x-reverse lg:space-x-20 justify-center items-center p-4"
+            :class="{
+              'h-screen': !halfHeight,
+              'h-screen md:h-1/2 md:mt-32 md:mb-16 lg:mt-48 lg:mb-32':
+                halfHeight,
+            }"
           >
             <slot name="landing"></slot>
           </div>
@@ -28,6 +36,12 @@ import FooterComponent from "./FooterComponent.vue";
 export default defineComponent({
   name: "BaseLayout",
   components: { FooterComponent },
+  props: {
+    halfHeight: {
+      type: Boolean,
+      required: false,
+    },
+  },
   setup() {
     const route = useRoute();
 

@@ -1,5 +1,5 @@
 <template>
-  <BaseLayout>
+  <BaseLayout :halfHeight="true">
     <template v-slot:landing>
       <div class="flex flex-col text-center">
         <p class="text-xl md:text-2xl lg:text-3xl font-semibold">Project</p>
@@ -9,9 +9,9 @@
         <p class="text-xl md:text-2xl lg:text-3xl italic">
           {{ project?.description }}
         </p>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center md:hidden">
           <a
-            href="#information"
+            href="#projects"
             class="bg-white animate-bounce rounded-full p-3 inline-flex mt-10"
           >
             <ArrowDownIcon class="h-6 w-6 text-black inline" />
@@ -21,11 +21,11 @@
     </template>
 
     <template v-slot:content>
-      <div>
+      <!-- <div>
         <div class="container mx-auto">
           <div class="mx-auto px-4 mb-8" id="information"></div>
         </div>
-      </div>
+      </div> -->
     </template>
   </BaseLayout>
 </template>
