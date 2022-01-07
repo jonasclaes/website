@@ -48,11 +48,10 @@
                           {{ project.name }}
                         </h3>
                       </div>
-                      <div>
+                      <div v-if="project.status">
                         <span
                           class="py-1 px-2 rounded-md shadow-md font-semibold"
                           :class="{
-                            'bg-gray-500': project.status === undefined,
                             'bg-red-500':
                               project.status === ProjectStatus.NOT_STARTED,
                             'bg-blue-500':
