@@ -20,7 +20,7 @@
     <template v-slot:content>
       <div>
         <div class="container mx-auto">
-          <div class="mx-auto px-4 mb-8 pt-8 md:pt-0" id="projects">
+          <div class="mx-auto mb-8 pt-8 md:pt-0" id="projects">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
               <template v-if="projects.length">
                 <div

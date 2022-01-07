@@ -1,3 +1,4 @@
+import { ContentType } from "./types/ContentType";
 import { Projects } from "./types/Projects";
 import { ProjectStatus } from "./types/ProjectStatus";
 
@@ -10,6 +11,8 @@ const data: { projects: Projects } = {
       cover: require("./assets/projects/delta-technics.png"),
       status: ProjectStatus.FINISHED,
       date: new Date("2021-12-24T15:00:00.000Z"),
+      content: "<h1>Hello, world!</h1>",
+      contentType: ContentType.HTML,
     },
     {
       slug: "thomas-more-digital-innovation-cloud-server",

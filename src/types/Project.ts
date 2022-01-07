@@ -1,3 +1,4 @@
+import { ContentType } from "./ContentType";
 import { ProjectStatus } from "./ProjectStatus";
 
 export type Project = {
@@ -18,4 +19,10 @@ export type Project = {
 
   // The finish date of the project.
   date?: Date;
+
+  // The content of the project.
+  content?: string;
+
+  // The type of the content of the project.
+  contentType?: ContentType;
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-800 text-white">
     <div class="container mx-auto">
-      <div class="max-w-6xl mx-auto p-4">
+      <div class="mx-auto p-4">
         <div
           class="flex justify-between items-center font-semibold text-sm md:text-base"
         >
