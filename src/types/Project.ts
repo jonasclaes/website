@@ -1,3 +1,5 @@
+import { ProjectStatus } from "./ProjectStatus";
+
 export type Project = {
   // The URL slug of the project.
   slug: string;
@@ -10,4 +12,10 @@ export type Project = {
 
   // A link to the cover image of the project.
   cover?: string;
+
+  // The status of the project.
+  status?: ProjectStatus;
+
+  // The finish date of the project.
+  date?: Date;
 };
