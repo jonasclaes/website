@@ -1,25 +1,28 @@
 <template>
-  <div>
+  <div :style="{ 'background-color': $props.fill }">
     <div
-      class="min-h-screen h-full w-full text-white overflow-y-hidden"
+      class="w-full text-white overflow-y-hidden"
       :class="{
-        'bg-cogs': background === 0,
-        'bg-pcb': background === 1,
+        'bg-cogs': !(backgroundImage || fill) && background === 0,
+        'bg-pcb': !(backgroundImage || fill) && background === 1,
+        'bg-no-repeat bg-center': backgroundImage,
+      }"
+      :style="{
+        'background-image': $props.backgroundImage
+          ? `url('${$props.backgroundImage}')`
+          : undefined,
       }"
     >
-      <div class="container mx-auto">
+      <div
+        class="container mx-auto"
+        :class="{ 'backdrop-blur': backgroundImage }"
+      >
         <div class="mx-auto px-4">
           <div
-            class="flex flex-col sm:flex-row-reverse space-y-10 sm:space-x-reverse sm:space-x-10 sm:space-y-0 lg:space-x-reverse lg:space-x-20 justify-center items-center p-4"
-            :class="{
-              'h-screen': !halfHeight,
-              'h-screen md:h-1/2 md:mt-32 md:mb-16 lg:mt-48 lg:mb-32':
-                halfHeight,
-            }"
+            class="h-screen flex flex-col sm:flex-row-reverse space-y-10 sm:space-x-reverse sm:space-x-10 sm:space-y-0 lg:space-x-reverse lg:space-x-20 justify-center items-center p-4"
           >
             <slot name="landing"></slot>
           </div>
-          <slot name="content"></slot>
         </div>
       </div>
     </div>
@@ -37,12 +40,16 @@ export default defineComponent({
   name: "BaseLayout",
   components: { FooterComponent },
   props: {
-    halfHeight: {
-      type: Boolean,
+    backgroundImage: {
+      type: String,
+      required: false,
+    },
+    fill: {
+      type: String,
       required: false,
     },
   },
-  setup() {
+  setup(props) {
     const route = useRoute();
 
     const background: Ref<number> = ref(0);
@@ -64,6 +71,7 @@ export default defineComponent({
 
     onMounted(changeBackground);
     watch(route, changeBackground);
+    watch(props, changeBackground);
 
     return {
       background,

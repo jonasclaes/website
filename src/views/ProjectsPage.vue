@@ -1,12 +1,12 @@
 <template>
-  <BaseLayout :halfHeight="true">
+  <BaseLayout>
     <template v-slot:landing>
       <div class="flex flex-col text-center">
         <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold">Projects</h1>
         <p class="text-xl md:text-2xl lg:text-3xl italic">
           A list of all the projects I've worked on
         </p>
-        <div class="flex justify-center items-center md:hidden">
+        <div class="flex justify-center items-center">
           <a
             href="#projects"
             class="bg-white animate-bounce rounded-full p-3 inline-flex mt-10"
@@ -17,11 +17,13 @@
       </div>
     </template>
 
-    <template v-slot:content>
-      <div>
+    <template v-slot:default>
+      <div class="bg-gray-600 md:py-6">
         <div class="container mx-auto">
-          <div class="mx-auto mb-8 pt-8 md:pt-0" id="projects">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="mx-auto p-4" id="projects">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-9"
+            >
               <template v-if="projects.length">
                 <div
                   @click="openProject(project.slug)"

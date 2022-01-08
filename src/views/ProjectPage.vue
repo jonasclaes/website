@@ -1,5 +1,8 @@
 <template>
-  <BaseLayout :halfHeight="!!content">
+  <BaseLayout
+    :backgroundImage="project?.cover"
+    :fill="project?.coverBackgroundFill"
+  >
     <template v-slot:landing>
       <div class="flex flex-col text-center">
         <p class="text-xl md:text-2xl lg:text-3xl font-semibold">Project</p>
@@ -9,7 +12,7 @@
         <p class="text-xl md:text-2xl lg:text-3xl italic">
           {{ project?.description }}
         </p>
-        <div class="flex justify-center items-center md:hidden">
+        <div class="flex justify-center items-center">
           <a
             href="#content"
             class="bg-white animate-bounce rounded-full p-3 inline-flex mt-10"
@@ -20,20 +23,11 @@
       </div>
     </template>
 
-    <template v-slot:content>
-      <div v-if="content && project?.contentType">
+    <template v-slot:default>
+      <div v-if="content" class="md:py-6">
         <div class="container mx-auto">
-          <div class="mx-auto mb-8 pt-8 md:pt-0" id="content">
-            <div
-              id="content-markdown"
-              v-if="project?.contentType === ContentType.MARKDOWN"
-              v-html="content"
-              class="bg-gray-800 text-white p-4 rounded-lg shadow-lg"
-            ></div>
-            <div
-              v-else-if="project?.contentType === ContentType.HTML"
-              v-html="content"
-            ></div>
+          <div class="mx-auto p-4" id="content">
+            <component :is="content"></component>
           </div>
         </div>
       </div>
@@ -42,14 +36,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref, Ref } from "vue";
+import {
+  Component,
+  defineComponent,
+  onMounted,
+  ref,
+  Ref,
+  shallowRef,
+} from "vue";
 import { ArrowDownIcon } from "@heroicons/vue/solid";
 import BaseLayout from "@/components/BaseLayout.vue";
 import { useRoute } from "vue-router";
 import data from "@/data";
 import { Project } from "@/types/Project";
-import { ContentType } from "@/types/ContentType";
-import { marked } from "marked";
 
 export default defineComponent({
   name: "ProjectPage",
@@ -62,19 +61,18 @@ export default defineComponent({
     const route = useRoute();
 
     const project: Ref<Project | undefined> = ref(undefined);
-    const content: Ref<string> = ref("");
+    const content: Ref<Component | undefined> = shallowRef(undefined);
 
-    const loadData = () => {
+    const loadData = async () => {
+      // Find the project in the array of projects.
       project.value = data.projects.find(
         (project) => project.slug === route.params.slug
       );
 
-      if (project.value) {
-        if (project.value.contentType === ContentType.MARKDOWN) {
-          content.value = marked.parse(project.value?.content || "");
-        } else if (project.value.contentType === ContentType.HTML) {
-          content.value = project.value.content || "";
-        }
+      // Dynamically load the Vue component.
+      if (project.value && typeof project.value.content === "function") {
+        const component = await project.value.content();
+        content.value = component;
       }
     };
 
@@ -83,54 +81,7 @@ export default defineComponent({
     return {
       project,
       content,
-      ContentType,
     };
   },
 });
 </script>
-
-<style>
-#content-markdown h1 {
-  @apply text-2xl font-extrabold;
-}
-
-#content-markdown h2 {
-  @apply text-xl font-bold;
-}
-
-#content-markdown h3 {
-  @apply text-lg font-semibold;
-}
-
-#content-markdown p {
-  @apply text-base;
-}
-
-#content-markdown a {
-  @apply text-base text-blue-500;
-}
-
-#content-markdown strong {
-  @apply font-semibold;
-}
-
-#content-markdown code {
-  @apply bg-gray-700 p-1 rounded;
-}
-
-#content-markdown blockquote {
-  @apply bg-gray-700 border-l-8 border-gray-600 p-2;
-}
-
-#content-markdown hr {
-  @apply border my-2;
-}
-
-#content-markdown ul {
-  @apply ml-8 list-disc;
-}
-
-#content-markdown ol {
-  @apply ml-8 list-decimal;
-}
-</style>

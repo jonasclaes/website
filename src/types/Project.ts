@@ -1,4 +1,4 @@
-import { ContentType } from "./ContentType";
+import { Component } from "vue";
 import { ProjectStatus } from "./ProjectStatus";
 
 export type Project = {
@@ -14,6 +14,9 @@ export type Project = {
   // A link to the cover image of the project.
   cover?: string;
 
+  // The cover background to fill the page with.
+  coverBackgroundFill?: string;
+
   // The status of the project.
   status?: ProjectStatus;
 
@@ -21,8 +24,5 @@ export type Project = {
   date?: Date;
 
   // The content of the project.
-  content?: string;
-
-  // The type of the content of the project.
-  contentType?: ContentType;
+  content?: () => Promise<Component>;
 };
