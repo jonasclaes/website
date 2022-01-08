@@ -76,19 +76,59 @@
       <CardDark>
         <h3>Jonas Claes</h3>
         <p>
-          E-mail: <a href="mailto:jonas@jonasclaes.be">jonas@jonasclaes.be</a>
+          <font-awesome-icon :icon="['fa', 'envelope']" class="mr-2" /><a
+            href="mailto:jonas@jonasclaes.be"
+            >jonas@jonasclaes.be</a
+          >
         </p>
-        <p>Telefonisch: <a href="tel:+32484238902">+32 484 23 89 02</a></p>
+        <p>
+          <font-awesome-icon :icon="['fa', 'phone']" class="mr-2" /><a
+            href="tel:+32484238902"
+            >+32 484 23 89 02</a
+          >
+        </p>
+        <p>
+          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" /><a
+            href="https://jonasclaes.be"
+            target="_blank"
+            rel="noopener noreferrer"
+            >jonasclaes.be</a
+          >
+        </p>
+        <p>
+          <font-awesome-icon :icon="['fab', 'twitter']" class="mr-2" /><a
+            href="https://twitter.com/jonasclaesbe"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@jonasclaesbe</a
+          >
+        </p>
+        <p>
+          <font-awesome-icon :icon="['fab', 'github']" class="mr-2" /><a
+            href="https://github.com/jonasclaes"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@jonasclaes</a
+          >
+        </p>
+        <p>
+          <font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" /><a
+            href="https://instagram.com/jonasclaes.be"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@jonasclaes.be</a
+          >
+        </p>
       </CardDark>
       <CardDark>
         <h3>Lauri Giepmans</h3>
         <h4>Persoonlijk</h4>
         <p>
-          E-mail:
+          <font-awesome-icon :icon="['fa', 'envelope']" class="mr-2" />
           <a href="mailto:contact@laurigiepmans.nl">contact@laurigiepmans.nl</a>
         </p>
         <p>
-          Instagram:
+          <font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" />
           <a
             href="https://instagram.com/laurigiepmans"
             target="_blank"
@@ -97,7 +137,7 @@
           >
         </p>
         <p>
-          Website:
+          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" />
           <a
             href="https://www.laurigiepmans.nl"
             target="_blank"
@@ -107,7 +147,7 @@
         </p>
         <h4>Friendship Bubble</h4>
         <p>
-          Infosite:
+          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" />
           <a
             href="https://www.laurigiepmans.nl/diensten/friendship-bubble/"
             target="_blank"
@@ -116,7 +156,16 @@
           >
         </p>
         <p>
-          Instagram (Friendship Bubble):
+          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" />
+          <a
+            href="https://friendshipbubble.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            >friendshipbubble.nl</a
+          >
+        </p>
+        <p>
+          <font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" />
           <a
             href="https://www.instagram.com/friendshipbubble"
             target="_blank"
