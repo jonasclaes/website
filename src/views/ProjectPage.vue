@@ -24,7 +24,7 @@
     </template>
 
     <template v-slot:default>
-      <div v-if="content" class="md:py-6">
+      <div v-if="content" class="md:py-6 text-white">
         <div class="container mx-auto">
           <div class="mx-auto p-4" id="content">
             <component :is="content"></component>
@@ -43,6 +43,7 @@ import {
   ref,
   Ref,
   shallowRef,
+  watch,
 } from "vue";
 import { ArrowDownIcon } from "@heroicons/vue/solid";
 import BaseLayout from "@/components/BaseLayout.vue";
@@ -73,10 +74,13 @@ export default defineComponent({
       if (project.value && typeof project.value.content === "function") {
         const component = await project.value.content();
         content.value = component;
+      } else {
+        content.value = undefined;
       }
     };
 
     onMounted(loadData);
+    watch(route, loadData);
 
     return {
       project,

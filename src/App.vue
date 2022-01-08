@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen h-full w-full flex flex-col">
-    <div class="text-white z-10 top-0 w-full absolute bg-pattern shadow">
+    <div class="text-white z-10 top-0 w-full absolute bg-transparent">
       <div class="container mx-auto">
         <div class="mx-auto flex justify-between items-center p-4">
           <div class="flex items-center h-full space-x-2">
@@ -12,13 +12,21 @@
             />
           </div>
           <div class="flex space-x-3">
-            <router-link
-              v-for="navbarLink in navbarLinks"
-              :key="navbarLink.name"
-              :to="navbarLink.path"
-              :class="{ 'font-semibold': navbarLink.path === $route.path }"
-              >{{ navbarLink.name }}</router-link
-            >
+            <template v-for="navbarLink in navbarLinks" :key="navbarLink.name">
+              <router-link
+                v-if="!navbarLink.external"
+                :to="navbarLink.path"
+                :class="{ 'font-semibold': navbarLink.path === $route.path }"
+                >{{ navbarLink.name }}</router-link
+              >
+              <a
+                v-else
+                :href="navbarLink.path"
+                rel="noopener noreferrer"
+                :class="{ 'font-semibold': navbarLink.path === $route.path }"
+                >{{ navbarLink.name }}</a
+              >
+            </template>
           </div>
         </div>
       </div>
@@ -36,10 +44,17 @@ export default defineComponent({
       {
         name: "Home",
         path: "/",
+        external: false,
       },
       {
         name: "Projects",
         path: "/projects",
+        external: false,
+      },
+      {
+        name: "Blog",
+        path: "https://blog.jonasclaes.be",
+        external: true,
       },
     ];
 

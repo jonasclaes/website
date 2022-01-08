@@ -29,7 +29,7 @@
                   @click="openProject(project.slug)"
                   v-for="project in projects"
                   :key="project.name"
-                  class="bg-gray-800 text-white rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-110 cursor-pointer"
+                  class="bg-gray-800 text-white rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105 md:hover:scale-110 cursor-pointer"
                 >
                   <img
                     :src="
