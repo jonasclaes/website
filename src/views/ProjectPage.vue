@@ -26,7 +26,7 @@
     <template v-slot:default>
       <div v-if="content" class="md:py-6 text-white">
         <div class="container mx-auto">
-          <div class="mx-auto p-4" id="content">
+          <div class="max-w-6xl mx-auto p-4" id="content">
             <component :is="content"></component>
           </div>
         </div>

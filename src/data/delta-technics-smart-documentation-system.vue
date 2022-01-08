@@ -111,14 +111,14 @@
       wijzen.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div>
+      <CardDark>
         <h3>Jonas Claes</h3>
         <p>
           E-mail: <a href="mailto:jonas@jonasclaes.be">jonas@jonasclaes.be</a>
         </p>
         <p>Telefonisch: <a href="tel:+32484238902">+32 484 23 89 02</a></p>
-      </div>
-      <div>
+      </CardDark>
+      <CardDark>
         <h3>Thierry Eeman</h3>
         <p>
           E-mail:
@@ -126,10 +126,21 @@
             >thierry.eeman@student.thomasmore.be</a
           >
         </p>
-      </div>
+      </CardDark>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import CardDark from "@/components/content/CardDark.vue";
+
+export default defineComponent({
+  components: {
+    CardDark,
+  },
+});
+</script>
 
 <style scoped>
 h2 {
