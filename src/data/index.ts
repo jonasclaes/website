@@ -12,9 +12,9 @@ const data: { projects: Projects } = {
       status: ProjectStatus.FINISHED,
       date: new Date("2021-12-24T15:00:00.000Z"),
       content: () =>
-        import("@/data/delta-technics-smart-documentation-system.vue").then(
-          (res) => res.default
-        ),
+        import(
+          "@/data/content/delta-technics-smart-documentation-system.vue"
+        ).then((res) => res.default),
     },
     {
       slug: "thomas-more-digital-innovation-cloud-server",
@@ -23,6 +23,11 @@ const data: { projects: Projects } = {
       cover: require("@/assets/projects/thomas-more.png"),
       coverBackgroundFill: "#0d203b",
       status: ProjectStatus.IN_PROGRESS,
+      // date: new Date("2022-01-12T12:00:00.000Z"),
+      content: () =>
+        import(
+          "@/data/content/thomas-more-digital-innovation-cloud-server.vue"
+        ).then((res) => res.default),
     },
     {
       slug: "jochen-marien-domotica-arduino-homeassistant",
@@ -40,7 +45,7 @@ const data: { projects: Projects } = {
       coverBackgroundFill: "#5d6179",
       status: ProjectStatus.IN_PROGRESS,
       content: () =>
-        import("@/data/friendship-bubble-discord-bot.vue").then(
+        import("@/data/content/friendship-bubble-discord-bot.vue").then(
           (res) => res.default
         ),
     },

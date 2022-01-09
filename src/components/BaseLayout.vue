@@ -80,7 +80,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 /* Credits to heropatterns.com for the background pattern */
 .bg-cogs {
   background-color: #3b82f6;

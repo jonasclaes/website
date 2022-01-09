@@ -73,53 +73,7 @@
       wijzen.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-      <CardDark>
-        <h3>Jonas Claes</h3>
-        <p>
-          <font-awesome-icon :icon="['fa', 'envelope']" class="mr-2" /><a
-            href="mailto:jonas@jonasclaes.be"
-            >jonas@jonasclaes.be</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fa', 'phone']" class="mr-2" /><a
-            href="tel:+32484238902"
-            >+32 484 23 89 02</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" /><a
-            href="https://jonasclaes.be"
-            target="_blank"
-            rel="noopener noreferrer"
-            >jonasclaes.be</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fab', 'twitter']" class="mr-2" /><a
-            href="https://twitter.com/jonasclaesbe"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@jonasclaesbe</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fab', 'github']" class="mr-2" /><a
-            href="https://github.com/jonasclaes"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@jonasclaes</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" /><a
-            href="https://instagram.com/jonasclaes.be"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@jonasclaes.be</a
-          >
-        </p>
-      </CardDark>
+      <SocialsCardDark />
       <CardDark>
         <h3>Lauri Giepmans</h3>
         <h4>Persoonlijk</h4>
@@ -181,13 +135,17 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import CardDark from "@/components/content/CardDark.vue";
+import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
 
 export default defineComponent({
-  components: { CardDark },
+  components: {
+    CardDark,
+    SocialsCardDark,
+  },
 });
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 h2 {
   @apply text-xl font-semibold;
 }

@@ -56,7 +56,7 @@
       Allereerst hebben we een projectplanning gemaakt en een Trello-board met
       alle doelstellingen op. Dit hebben we op de SCRUM manier gedaan. Daarna
       heb ik het basisproject aangemaakt en deze naar een repo op GitHub
-      gepushed.
+      gepusht.
     </p>
     <p>
       Daarna konden we aan de slag en hebben we per sprint een periode van 2
@@ -70,7 +70,7 @@
     <p>
       Na onze eerste sprint hebben we een meeting met de klant gehouden om de
       vooruitgang te tonen. Zij waren op dat moment al blij met hoe het er uit
-      zag en hoe het project verloopte.
+      zag en hoe het project verliep.
     </p>
     <p>
       Onze productiviteit verhoogde naarmate we meer ervaring kregen met
@@ -84,7 +84,7 @@
       klant om de applicatie op hun hosting te installeren en configureren. Na
       de laatste kronkels uit het project uit te werken hebben we een laatste
       demo gegeven aan de klant en een korte uitleg over hoe alles werkt. Al bij
-      al een zeer successvolle oplevering!
+      al een zeer succesvolle oplevering!
     </p>
     <br />
     <h2>Open source</h2>
@@ -111,53 +111,7 @@
       wijzen.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-      <CardDark>
-        <h3>Jonas Claes</h3>
-        <p>
-          <font-awesome-icon :icon="['fa', 'envelope']" class="mr-2" /><a
-            href="mailto:jonas@jonasclaes.be"
-            >jonas@jonasclaes.be</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fa', 'phone']" class="mr-2" /><a
-            href="tel:+32484238902"
-            >+32 484 23 89 02</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" /><a
-            href="https://jonasclaes.be"
-            target="_blank"
-            rel="noopener noreferrer"
-            >jonasclaes.be</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fab', 'twitter']" class="mr-2" /><a
-            href="https://twitter.com/jonasclaesbe"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@jonasclaesbe</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fab', 'github']" class="mr-2" /><a
-            href="https://github.com/jonasclaes"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@jonasclaes</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" /><a
-            href="https://instagram.com/jonasclaes.be"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@jonasclaes.be</a
-          >
-        </p>
-      </CardDark>
+      <SocialsCardDark />
       <CardDark>
         <h3>Thierry Eeman</h3>
         <p>
@@ -174,15 +128,17 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import CardDark from "@/components/content/CardDark.vue";
+import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
 
 export default defineComponent({
   components: {
     CardDark,
+    SocialsCardDark,
   },
 });
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 h2 {
   @apply text-xl font-semibold;
 }
@@ -191,7 +147,19 @@ h3 {
   @apply text-lg font-semibold;
 }
 
+h4 {
+  @apply font-semibold;
+}
+
 a {
   @apply text-blue-500 font-semibold;
+}
+
+blockquote {
+  @apply bg-black bg-opacity-20 border-l-8 border-black border-opacity-40 p-4;
+}
+
+blockquote span {
+  @apply block font-semibold mt-4;
 }
 </style>
