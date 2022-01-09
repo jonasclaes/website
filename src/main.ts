@@ -8,17 +8,36 @@ import { PageTitleMixin } from "./mixins/pageTitle";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
+  faDiscord,
   faGithub,
   faInstagram,
+  faLaravel,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
+  faCodeBranch,
+  faCogs,
   faEnvelope,
   faGlobe,
   faPhone,
+  faStopwatch,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faInstagram, faTwitter, faGithub, faEnvelope, faPhone, faGlobe);
+library.add(
+  faInstagram,
+  faTwitter,
+  faGithub,
+  faEnvelope,
+  faPhone,
+  faGlobe,
+  faStopwatch,
+  faUsers,
+  faCogs,
+  faLaravel,
+  faDiscord,
+  faCodeBranch
+);
 
 createApp(App)
   .use(store)

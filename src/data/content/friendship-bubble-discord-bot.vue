@@ -1,4 +1,21 @@
 <template>
+  <StatisticsBlock>
+    <StatisticItem
+      :icon="['fas', 'code-branch']"
+      amount="100%"
+      text="open-source"
+    ></StatisticItem>
+    <StatisticItem
+      :icon="['fas', 'users']"
+      amount="1"
+      text="persoon"
+    ></StatisticItem>
+    <StatisticItem
+      :icon="['fab', 'discord']"
+      amount="1"
+      text="Discord bot"
+    ></StatisticItem>
+  </StatisticsBlock>
   <div class="text-justify">
     <h2>Wat is de Friendship Bubble Discord Bot?</h2>
     <p>
@@ -73,16 +90,24 @@
       wijzen.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-      <SocialsCardDark />
+      <SocialsCardDark></SocialsCardDark>
       <CardDark>
         <h3>Lauri Giepmans</h3>
         <h4>Persoonlijk</h4>
         <p>
-          <font-awesome-icon :icon="['fa', 'envelope']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fa', 'envelope']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a href="mailto:contact@laurigiepmans.nl">contact@laurigiepmans.nl</a>
         </p>
         <p>
-          <font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fab', 'instagram']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a
             href="https://instagram.com/laurigiepmans"
             target="_blank"
@@ -91,7 +116,11 @@
           >
         </p>
         <p>
-          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fa', 'globe']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a
             href="https://www.laurigiepmans.nl"
             target="_blank"
@@ -101,7 +130,11 @@
         </p>
         <h4>Friendship Bubble</h4>
         <p>
-          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fa', 'globe']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a
             href="https://www.laurigiepmans.nl/diensten/friendship-bubble/"
             target="_blank"
@@ -110,7 +143,11 @@
           >
         </p>
         <p>
-          <font-awesome-icon :icon="['fa', 'globe']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fa', 'globe']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a
             href="https://friendshipbubble.nl"
             target="_blank"
@@ -119,7 +156,11 @@
           >
         </p>
         <p>
-          <font-awesome-icon :icon="['fab', 'instagram']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fab', 'instagram']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a
             href="https://www.instagram.com/friendshipbubble"
             target="_blank"
@@ -136,11 +177,15 @@
 import { defineComponent } from "vue";
 import CardDark from "@/components/content/CardDark.vue";
 import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
+import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
+import StatisticItem from "@/components/content/StatisticItem.vue";
 
 export default defineComponent({
   components: {
     CardDark,
     SocialsCardDark,
+    StatisticsBlock,
+    StatisticItem,
   },
 });
 </script>

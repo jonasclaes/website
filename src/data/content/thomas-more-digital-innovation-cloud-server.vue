@@ -1,4 +1,21 @@
 <template>
+  <StatisticsBlock>
+    <StatisticItem
+      :icon="['fas', 'stopwatch']"
+      amount="16"
+      text="uur gespendeerd"
+    ></StatisticItem>
+    <StatisticItem
+      :icon="['fas', 'users']"
+      amount="1"
+      text="persoon"
+    ></StatisticItem>
+    <StatisticItem
+      :icon="['fas', 'cogs']"
+      amount="100%"
+      text="geconfigureerd"
+    ></StatisticItem>
+  </StatisticsBlock>
   <div class="text-justify">
     <h2>Wat is de Digital Innovation Cloud Server?</h2>
     <p>
@@ -54,17 +71,25 @@
       wijzen.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-      <SocialsCardDark />
+      <SocialsCardDark></SocialsCardDark>
       <CardDark>
         <h3>Jochen Mariën</h3>
         <p>
-          <font-awesome-icon :icon="['fa', 'envelope']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fa', 'envelope']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a href="mailto:jochen.marien@thomasmore.be"
             >jochen.marien@thomasmore.be</a
           >
         </p>
         <p>
-          <font-awesome-icon :icon="['fa', 'phone']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fa', 'phone']"
+            fixed-width
+            class="mr-2"
+          ></font-awesome-icon>
           <a href="tel:+3214740581">+32 14 74 05 81</a>
         </p>
       </CardDark>
@@ -76,11 +101,15 @@
 import { defineComponent } from "vue";
 import CardDark from "@/components/content/CardDark.vue";
 import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
+import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
+import StatisticItem from "@/components/content/StatisticItem.vue";
 
 export default defineComponent({
   components: {
     CardDark,
     SocialsCardDark,
+    StatisticsBlock,
+    StatisticItem,
   },
 });
 </script>

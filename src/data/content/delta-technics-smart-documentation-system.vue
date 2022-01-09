@@ -1,4 +1,21 @@
 <template>
+  <StatisticsBlock>
+    <StatisticItem
+      :icon="['fas', 'stopwatch']"
+      amount="392"
+      text="uur gespendeerd"
+    ></StatisticItem>
+    <StatisticItem
+      :icon="['fas', 'users']"
+      amount="2"
+      text="personen"
+    ></StatisticItem>
+    <StatisticItem
+      :icon="['fab', 'laravel']"
+      amount="laravel 8"
+      text="best practices"
+    ></StatisticItem>
+  </StatisticsBlock>
   <div class="text-justify">
     <h2>Wat is het smart documentation system?</h2>
     <p>
@@ -111,11 +128,14 @@
       wijzen.
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
-      <SocialsCardDark />
+      <SocialsCardDark></SocialsCardDark>
       <CardDark>
         <h3>Thierry Eeman</h3>
         <p>
-          <font-awesome-icon :icon="['fa', 'envelope']" class="mr-2" />
+          <font-awesome-icon
+            :icon="['fa', 'envelope']"
+            class="mr-2"
+          ></font-awesome-icon>
           <a href="mailto:thierry.eeman@student.thomasmore.be"
             >thierry.eeman@student.thomasmore.be</a
           >
@@ -129,11 +149,15 @@
 import { defineComponent } from "vue";
 import CardDark from "@/components/content/CardDark.vue";
 import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
+import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
+import StatisticItem from "@/components/content/StatisticItem.vue";
 
 export default defineComponent({
   components: {
     CardDark,
     SocialsCardDark,
+    StatisticsBlock,
+    StatisticItem,
   },
 });
 </script>
