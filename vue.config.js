@@ -1,12 +1,7 @@
 module.exports = {
-  configureWebpack: {
-    module: {
-      rules: [
-        {
-          test: /data\/[A-z0-9-]*\.html$/i,
-          type: "asset/source",
-        },
-      ],
-    },
+  pwa: {
+    name: "jonasclaes.be",
+    themeColor: "#000000",
+    msTileColor: "#2b5797",
   },
 };
