@@ -1,7 +1,7 @@
 <template>
   <BaseLayout
-    :backgroundImage="project?.cover"
-    :fill="project?.coverBackgroundFill"
+    :backgroundImage="getProjectCoverImage(project?.cover)"
+    :fill="getProjectFill(project?.coverBackgroundFill)"
   >
     <template v-slot:landing>
       <div class="flex flex-col text-center">
@@ -79,12 +79,24 @@ export default defineComponent({
       }
     };
 
+    const getProjectCoverImage = (cover?: string): string => {
+      if (cover) return cover;
+      return require("@/assets/project-cover-not-found.png");
+    };
+
+    const getProjectFill = (fill?: string): string => {
+      if (fill) return fill;
+      return "#1c2120";
+    };
+
     onMounted(loadData);
     watch(route, loadData);
 
     return {
       project,
       content,
+      getProjectCoverImage,
+      getProjectFill,
     };
   },
 });

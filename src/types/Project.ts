@@ -11,6 +11,9 @@ export type Project = {
   // A short description of the project.
   description?: string;
 
+  // An array of labels to add to the project.
+  labels?: string[];
+
   // A link to the cover image of the project.
   cover?: string;
 

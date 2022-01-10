@@ -32,9 +32,7 @@
                   class="bg-gray-800 text-white rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105 md:hover:scale-110 cursor-pointer"
                 >
                   <img
-                    :src="
-                      project.cover || 'https://via.placeholder.com/400x200'
-                    "
+                    :src="getProjectCoverImage(project.cover)"
                     :alt="project.name"
                     class="rounded-t-lg w-full"
                   />
@@ -49,10 +47,16 @@
                         <h3 class="font-semibold text-lg">
                           {{ project.name }}
                         </h3>
+                        <p
+                          v-if="project.description"
+                          class="text-gray-400 break-words"
+                        >
+                          {{ project.description }}
+                        </p>
                       </div>
                       <div v-if="project.status">
                         <span
-                          class="py-1 px-2 rounded-md shadow-md font-semibold"
+                          class="py-1 px-2 rounded-md shadow-md font-semibold whitespace-nowrap"
                           :class="{
                             'bg-red-500':
                               project.status === ProjectStatus.NOT_STARTED,
@@ -61,16 +65,10 @@
                             'bg-green-500':
                               project.status === ProjectStatus.FINISHED,
                           }"
-                          v-html="getProjectStatusText(project.status)"
-                        ></span>
+                          >{{ getProjectStatusText(project.status) }}</span
+                        >
                       </div>
                     </div>
-                    <p
-                      v-if="project.description"
-                      class="text-gray-400 break-words"
-                    >
-                      {{ project.description }}
-                    </p>
                   </div>
                 </div>
               </template>
@@ -120,10 +118,10 @@ export default defineComponent({
           return "Unknown";
 
         case ProjectStatus.NOT_STARTED:
-          return "Not&nbsp;started";
+          return "Not started";
 
         case ProjectStatus.IN_PROGRESS:
-          return "In&nbsp;progress";
+          return "In progress";
 
         case ProjectStatus.FINISHED:
           return "Finished";
@@ -131,6 +129,11 @@ export default defineComponent({
         default:
           return "Unknown";
       }
+    };
+
+    const getProjectCoverImage = (cover?: string): string => {
+      if (cover) return cover;
+      return require("@/assets/project-cover-not-found.png");
     };
 
     const formatProjectDate = (date: Date): string => {
@@ -158,6 +161,7 @@ export default defineComponent({
       projects,
       openProject,
       getProjectStatusText,
+      getProjectCoverImage,
       ProjectStatus,
       formatProjectDate,
     };

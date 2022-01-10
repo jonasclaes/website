@@ -77,6 +77,7 @@ const data: { projects: Projects } = {
       cover: require("@/assets/projects/van-roey.png"),
       coverBackgroundFill: "#76b9f0",
       status: ProjectStatus.FINISHED,
+      date: new Date("2021-05-31T12:00:00.000Z"),
     },
     {
       slug: "jonas-claes-kadoosje",
