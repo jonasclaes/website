@@ -15,6 +15,8 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
+  faAward,
+  faBox,
   faClock,
   faCodeBranch,
   faCogs,
@@ -42,7 +44,9 @@ library.add(
   faCodeBranch,
   faCubes,
   faClock,
-  faPaintRoller
+  faPaintRoller,
+  faAward,
+  faBox
 );
 
 createApp(App)

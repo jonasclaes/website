@@ -69,6 +69,10 @@ const data: { projects: Projects } = {
       coverBackgroundFill: "#23547b",
       status: ProjectStatus.FINISHED,
       date: new Date("2020-06-30T15:00:00.000Z"),
+      content: () =>
+        import("@/data/content/watertechniek-teunissen-datalogging.vue").then(
+          (res) => res.default
+        ),
     },
     {
       slug: "van-roey-interactive-wall",
