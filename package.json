@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "@heroicons/vue": "^1.0.5",
+    "@vueuse/head": "^0.7.4",
     "autoprefixer": "^10",
     "core-js": "^3.6.5",
     "postcss": "^8",

@@ -145,6 +145,7 @@ import CardDark from "@/components/content/CardDark.vue";
 import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
 import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
 import StatisticItem from "@/components/content/StatisticItem.vue";
+import { useHead } from "@vueuse/head";
 
 export default defineComponent({
   components: {
@@ -152,6 +153,21 @@ export default defineComponent({
     SocialsCardDark,
     StatisticsBlock,
     StatisticItem,
+  },
+  setup() {
+    useHead({
+      meta: [
+        {
+          name: "author",
+          content: "Jonas Claes",
+        },
+        {
+          name: "description",
+          content:
+            "De Friendship Bubble is een community op Discord die zich richt tot het verbinden van mensen in moeilijke tijden. Deze community is zo inclusief mogelijk, dus iedereen is er welkom en wordt er geaccepteerd.",
+        },
+      ],
+    });
   },
 });
 </script>

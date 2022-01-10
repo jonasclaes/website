@@ -119,6 +119,7 @@ import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
 import StatisticItem from "@/components/content/StatisticItem.vue";
 import SocialsCardLight from "@/components/content/SocialsCardLight.vue";
 import CardLight from "@/components/content/CardLight.vue";
+import { useHead } from "@vueuse/head";
 
 export default defineComponent({
   components: {
@@ -126,6 +127,21 @@ export default defineComponent({
     StatisticItem,
     SocialsCardLight,
     CardLight,
+  },
+  setup() {
+    useHead({
+      meta: [
+        {
+          name: "author",
+          content: "Jonas Claes",
+        },
+        {
+          name: "description",
+          content:
+            "De interactive wall is een muur, gemaakt uit hout, die beschilderd is met elektrisch geleidende verf. Deze verf is verbonden met draden naar een Raspberry Pi met een touch controller HAT. De Raspberry Pi is ook verbonden met een monitor die een custom website toont. Door één van deze vlakken aan te raken, zal de getoonde content zich aanpassen. Op die manier wordt er een tijdlijn weergegeven van Van Roey van begin tot einde.",
+        },
+      ],
+    });
   },
 });
 </script>

@@ -87,12 +87,28 @@ import { defineComponent } from "vue";
 import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
 import StatisticItem from "@/components/content/StatisticItem.vue";
 import SocialsCardLight from "@/components/content/SocialsCardLight.vue";
+import { useHead } from "@vueuse/head";
 
 export default defineComponent({
   components: {
     StatisticsBlock,
     StatisticItem,
     SocialsCardLight,
+  },
+  setup() {
+    useHead({
+      meta: [
+        {
+          name: "author",
+          content: "Jonas Claes",
+        },
+        {
+          name: "description",
+          content:
+            "De datalogging is een vervanging van een oud instrument, met nieuwe, moderne technologieën. Watertechniek Teunissen specialiseert zich in pomptechniek en piping, ook herstellen ze pompen. Nadat een pomp hersteld was werd deze getest met behulp van een analoge debietmeter en een analoge drukmeter. Dit is vervangen door een nieuw buizensysteem met een digitale debietmeter en een digital drukmeter, verbonden met een PLC-sturing en een MiniPC.",
+        },
+      ],
+    });
   },
 });
 </script>

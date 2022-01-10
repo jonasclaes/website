@@ -150,6 +150,7 @@ import CardDark from "@/components/content/CardDark.vue";
 import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
 import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
 import StatisticItem from "@/components/content/StatisticItem.vue";
+import { useHead } from "@vueuse/head";
 
 export default defineComponent({
   components: {
@@ -157,6 +158,21 @@ export default defineComponent({
     SocialsCardDark,
     StatisticsBlock,
     StatisticItem,
+  },
+  setup() {
+    useHead({
+      meta: [
+        {
+          name: "author",
+          content: "Jonas Claes",
+        },
+        {
+          name: "description",
+          content:
+            "Het is een platform om documentatie in op te slaan en te beheren. Daarnaast is het ook mogelijk om deze gemakkelijk te delen met de klant. Voor de klant is het makkelijk om wijzigingen door te voeren aan de documentatie mocht er iets veranderen. Op die manier raakt de documentatie nooit verloren en is er meteen een grote besparing qua papierverbruik.",
+        },
+      ],
+    });
   },
 });
 </script>

@@ -28,6 +28,7 @@ import {
   faStopwatch,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import { createHead } from "@vueuse/head";
 
 library.add(
   faInstagram,
@@ -52,6 +53,7 @@ library.add(
 createApp(App)
   .use(store)
   .use(router)
+  .use(createHead())
   .mixin(PageTitleMixin)
   .component("font-awesome-icon", FontAwesomeIcon)
   .mount("#app");

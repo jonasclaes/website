@@ -114,6 +114,7 @@ import CardDark from "@/components/content/CardDark.vue";
 import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
 import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
 import StatisticItem from "@/components/content/StatisticItem.vue";
+import { useHead } from "@vueuse/head";
 
 export default defineComponent({
   components: {
@@ -121,6 +122,21 @@ export default defineComponent({
     SocialsCardDark,
     StatisticsBlock,
     StatisticItem,
+  },
+  setup() {
+    useHead({
+      meta: [
+        {
+          name: "author",
+          content: "Jonas Claes",
+        },
+        {
+          name: "description",
+          content:
+            "De bedoeling van dit project is om met kleine microcontrollers een domoticasturing te bouwen. Deze moet makkelijk te programmeren zijn, moet werken wanneer er geen internet is of bepaalde diensten niet werken en moet kunnen communiceren met andere apparaten.",
+        },
+      ],
+    });
   },
 });
 </script>

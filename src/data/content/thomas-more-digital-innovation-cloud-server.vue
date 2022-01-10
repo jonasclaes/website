@@ -98,6 +98,7 @@ import CardDark from "@/components/content/CardDark.vue";
 import SocialsCardDark from "@/components/content/SocialsCardDark.vue";
 import StatisticsBlock from "@/components/content/StatisticsBlock.vue";
 import StatisticItem from "@/components/content/StatisticItem.vue";
+import { useHead } from "@vueuse/head";
 
 export default defineComponent({
   components: {
@@ -105,6 +106,21 @@ export default defineComponent({
     SocialsCardDark,
     StatisticsBlock,
     StatisticItem,
+  },
+  setup() {
+    useHead({
+      meta: [
+        {
+          name: "author",
+          content: "Jonas Claes",
+        },
+        {
+          name: "description",
+          content:
+            "De Digital Innovation cloud server is een professionele rack-server die onze richting (Digital Innovation), gedoneerd heeft gekregen. Met deze server zouden we graag applicaties draaien vanuit onze richting. Daarnaast dient deze server ook om test cases op te zetten en virtuele machines te draaien.",
+        },
+      ],
+    });
   },
 });
 </script>
