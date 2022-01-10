@@ -15,11 +15,13 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
+  faClock,
   faCodeBranch,
   faCogs,
   faCubes,
   faEnvelope,
   faGlobe,
+  faPaintRoller,
   faPhone,
   faStopwatch,
   faUsers,
@@ -38,7 +40,9 @@ library.add(
   faLaravel,
   faDiscord,
   faCodeBranch,
-  faCubes
+  faCubes,
+  faClock,
+  faPaintRoller
 );
 
 createApp(App)

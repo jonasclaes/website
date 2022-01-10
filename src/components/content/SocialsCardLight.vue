@@ -1,5 +1,5 @@
 <template>
-  <CardDark
+  <CardLight
     name="Jonas Claes"
     :links="[
       {
@@ -34,15 +34,17 @@
       },
     ]"
   >
-  </CardDark>
+  </CardLight>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import CardDark from "./CardDark.vue";
+import CardLight from "./CardLight.vue";
 
 export default defineComponent({
-  name: "SocialsCardDark",
-  components: { CardDark },
+  name: "SocialsCardLight",
+  components: {
+    CardLight,
+  },
 });
 </script>

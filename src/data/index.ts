@@ -78,6 +78,10 @@ const data: { projects: Projects } = {
       coverBackgroundFill: "#76b9f0",
       status: ProjectStatus.FINISHED,
       date: new Date("2021-05-31T12:00:00.000Z"),
+      content: () =>
+        import("@/data/content/van-roey-interactive-wall.vue").then(
+          (res) => res.default
+        ),
     },
     {
       slug: "jonas-claes-kadoosje",

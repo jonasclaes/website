@@ -129,17 +129,16 @@
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
       <SocialsCardDark></SocialsCardDark>
-      <CardDark>
-        <h3>Thierry Eeman</h3>
-        <p>
-          <font-awesome-icon
-            :icon="['fa', 'envelope']"
-            class="mr-2"
-          ></font-awesome-icon>
-          <a href="mailto:thierry.eeman@student.thomasmore.be"
-            >thierry.eeman@student.thomasmore.be</a
-          >
-        </p>
+      <CardDark
+        name="Thierry Eeman"
+        :links="[
+          {
+            icon: ['fa', 'envelope'],
+            href: 'mailto:thierry.eeman@student.thomasmore.be',
+            text: 'thierry.eeman@student.thomasmore.be',
+          },
+        ]"
+      >
       </CardDark>
     </div>
   </div>

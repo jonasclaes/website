@@ -26,7 +26,7 @@ type Link = {
 type Links = Link[];
 
 export default defineComponent({
-  name: "CardDark",
+  name: "CardLight",
   props: {
     name: {
       type: String,
@@ -46,6 +46,6 @@ h3 {
 }
 
 a {
-  @apply text-blue-500 font-semibold;
+  @apply text-blue-300 font-semibold;
 }
 </style>

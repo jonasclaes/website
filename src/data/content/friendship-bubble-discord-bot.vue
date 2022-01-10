@@ -91,84 +91,50 @@
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
       <SocialsCardDark></SocialsCardDark>
-      <CardDark>
-        <h3>Lauri Giepmans</h3>
-        <h4>Persoonlijk</h4>
-        <p>
-          <font-awesome-icon
-            :icon="['fa', 'envelope']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a href="mailto:contact@laurigiepmans.nl">contact@laurigiepmans.nl</a>
-        </p>
-        <p>
-          <font-awesome-icon
-            :icon="['fab', 'instagram']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a
-            href="https://instagram.com/laurigiepmans"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@laurigiepmans</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon
-            :icon="['fa', 'globe']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a
-            href="https://www.laurigiepmans.nl"
-            target="_blank"
-            rel="noopener noreferrer"
-            >laurigiepmans.nl</a
-          >
-        </p>
-        <h4>Friendship Bubble</h4>
-        <p>
-          <font-awesome-icon
-            :icon="['fa', 'globe']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a
-            href="https://www.laurigiepmans.nl/diensten/friendship-bubble/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >laurigiepmans.nl/diensten/friendship-bubble</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon
-            :icon="['fa', 'globe']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a
-            href="https://friendshipbubble.nl"
-            target="_blank"
-            rel="noopener noreferrer"
-            >friendshipbubble.nl</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon
-            :icon="['fab', 'instagram']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a
-            href="https://www.instagram.com/friendshipbubble"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@friendshipbubble</a
-          >
-        </p>
-      </CardDark>
+      <div class="grid grid-cols-1 gap-3 items-start">
+        <CardDark
+          name="Lauri Giepmans"
+          :links="[
+            {
+              icon: ['fa', 'envelope'],
+              href: 'mailto:contact@laurigiepmans.nl',
+              text: 'contact@laurigiepmans.nl',
+            },
+            {
+              icon: ['fab', 'instagram'],
+              href: 'https://instagram.com/laurigiepmans',
+              text: '@laurigiepmans',
+            },
+            {
+              icon: ['fa', 'globe'],
+              href: 'https://www.laurigiepmans.nl',
+              text: 'laurigiepmans.nl',
+            },
+          ]"
+        >
+        </CardDark>
+        <CardDark
+          name="Friendship Bubble"
+          :links="[
+            {
+              icon: ['fa', 'globe'],
+              href: 'https://www.laurigiepmans.nl/diensten/friendship-bubble',
+              text: 'laurigiepmans.nl/diensten/friendship-bubble',
+            },
+            {
+              icon: ['fa', 'globe'],
+              href: 'https://friendshipbubble.nl',
+              text: 'friendshipbubble.nl',
+            },
+            {
+              icon: ['fab', 'instagram'],
+              href: 'https://www.instagram.com/friendshipbubble',
+              text: '@friendshipbubble',
+            },
+          ]"
+        >
+        </CardDark>
+      </div>
     </div>
   </div>
 </template>

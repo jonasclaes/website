@@ -72,26 +72,21 @@
     </p>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-start">
       <SocialsCardDark></SocialsCardDark>
-      <CardDark>
-        <h3>Jochen Mariën</h3>
-        <p>
-          <font-awesome-icon
-            :icon="['fa', 'envelope']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a href="mailto:jochen.marien@thomasmore.be"
-            >jochen.marien@thomasmore.be</a
-          >
-        </p>
-        <p>
-          <font-awesome-icon
-            :icon="['fa', 'phone']"
-            fixed-width
-            class="mr-2"
-          ></font-awesome-icon>
-          <a href="tel:+3214740581">+32 14 74 05 81</a>
-        </p>
+      <CardDark
+        name="Jochen Mariën"
+        :links="[
+          {
+            icon: ['fa', 'envelope'],
+            href: 'mailto:jochen.marien@thomasmore.be',
+            text: 'jochen.marien@thomasmore.be',
+          },
+          {
+            icon: ['fa', 'phone'],
+            href: 'tel:+3214740581',
+            text: '+32 14 74 05 81',
+          },
+        ]"
+      >
       </CardDark>
     </div>
   </div>
