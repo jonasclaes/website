@@ -2,7 +2,7 @@
   <StatisticsBlock>
     <StatisticItem
       :icon="['fas', 'stopwatch']"
-      amount="392"
+      amount="393"
       text="uur gespendeerd"
     ></StatisticItem>
     <StatisticItem

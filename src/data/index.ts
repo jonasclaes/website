@@ -36,6 +36,10 @@ const data: { projects: Projects } = {
       cover: require("@/assets/projects/thomas-more.png"),
       coverBackgroundFill: "#0d203b",
       status: ProjectStatus.IN_PROGRESS,
+      content: () =>
+        import(
+          "@/data/content/jochen-marien-domotica-arduino-homeassistant.vue"
+        ).then((res) => res.default),
     },
     {
       slug: "friendship-bubble-discord-bot",

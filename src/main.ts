@@ -17,6 +17,7 @@ import {
 import {
   faCodeBranch,
   faCogs,
+  faCubes,
   faEnvelope,
   faGlobe,
   faPhone,
@@ -36,7 +37,8 @@ library.add(
   faCogs,
   faLaravel,
   faDiscord,
-  faCodeBranch
+  faCodeBranch,
+  faCubes
 );
 
 createApp(App)
