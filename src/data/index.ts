@@ -22,8 +22,8 @@ const data: { projects: Projects } = {
       description: "Digital Innovation Cloud Server",
       cover: require("@/assets/projects/thomas-more.png"),
       coverBackgroundFill: "#0d203b",
-      status: ProjectStatus.IN_PROGRESS,
-      // date: new Date("2022-01-12T12:00:00.000Z"),
+      status: ProjectStatus.FINISHED,
+      date: new Date("2022-01-11T12:00:00.000Z"),
       content: () =>
         import(
           "@/data/content/thomas-more-digital-innovation-cloud-server.vue"

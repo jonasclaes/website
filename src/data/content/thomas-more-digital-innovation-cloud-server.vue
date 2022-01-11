@@ -63,6 +63,12 @@
       met Cloudflare een gratis Argon-tunnel opzetten, dit werkt van binnen naar
       buiten toe.
     </p>
+    <p>
+      Op de dag dat we de server geplaatst hebben in het datacentrum, heb ik nog
+      wat configuratie gedaan en hebben we mogelijke IP ranges besproken.
+      Daarnaast hebben we meteen Nextcloud geïnstalleerd zodat we onze eigen
+      file sharing applicatie hebben.
+    </p>
     <br />
     <h2>Contact</h2>
     <p>
