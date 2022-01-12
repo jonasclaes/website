@@ -51,11 +51,6 @@ export default defineComponent({
         path: "/projects",
         external: false,
       },
-      {
-        name: "Blog",
-        path: "https://blog.jonasclaes.be",
-        external: true,
-      },
     ];
 
     return {
