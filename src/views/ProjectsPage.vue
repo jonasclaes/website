@@ -133,7 +133,7 @@ export default defineComponent({
 
     const getProjectCoverImage = (cover?: string): string => {
       if (cover) return cover;
-      return require("@/assets/project-cover-not-found.png");
+      return require("@/assets/project-cover-not-found.jpg");
     };
 
     const formatProjectDate = (date: Date): string => {

@@ -1,10 +1,7 @@
 <template>
-  <BaseLayout
-    :backgroundImage="getProjectCoverImage(project?.cover)"
-    :fill="getProjectFill(project?.coverBackgroundFill)"
-  >
+  <BaseLayout :backgroundImage="backgroundImage" :fill="backgroundColor">
     <template v-slot:landing>
-      <div class="flex flex-col text-center">
+      <div class="flex flex-col text-center firefoxOverlayFix">
         <p class="text-xl md:text-2xl lg:text-3xl font-semibold">Project</p>
         <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold">
           {{ project?.name }}
@@ -23,15 +20,13 @@
       </div>
     </template>
 
-    <template v-slot:default>
-      <div v-if="content" class="md:py-6 text-white">
-        <div class="container mx-auto">
-          <div class="max-w-6xl mx-auto p-4" id="content">
-            <component :is="content"></component>
-          </div>
+    <div v-if="content" class="md:py-6 text-white">
+      <div class="container mx-auto">
+        <div class="max-w-6xl mx-auto p-4" id="content">
+          <component :is="content"></component>
         </div>
       </div>
-    </template>
+    </div>
   </BaseLayout>
 </template>
 
@@ -63,6 +58,8 @@ export default defineComponent({
 
     const project: Ref<Project | undefined> = ref(undefined);
     const content: Ref<Component | undefined> = shallowRef(undefined);
+    const backgroundImage: Ref<string | undefined> = ref(undefined);
+    const backgroundColor: Ref<string | undefined> = ref(undefined);
 
     const loadData = async () => {
       // Find the project in the array of projects.
@@ -81,7 +78,7 @@ export default defineComponent({
 
     const getProjectCoverImage = (cover?: string): string => {
       if (cover) return cover;
-      return require("@/assets/project-cover-not-found.png");
+      return require("@/assets/project-cover-not-found.jpg");
     };
 
     const getProjectFill = (fill?: string): string => {
@@ -89,15 +86,33 @@ export default defineComponent({
       return "#1c2120";
     };
 
+    const getBackgroundMix = () => {
+      const coverImage = getProjectCoverImage(project.value?.cover);
+      const coverFill = getProjectFill(project.value?.coverBackgroundFill);
+
+      backgroundImage.value = coverImage;
+      backgroundColor.value = coverFill;
+    };
+
     onMounted(loadData);
     watch(route, loadData);
+    watch(project, getBackgroundMix);
 
     return {
       project,
       content,
-      getProjectCoverImage,
-      getProjectFill,
+      backgroundImage,
+      backgroundColor,
     };
   },
 });
 </script>
+
+<style lang="postcss" scoped>
+/* Firefox doesn't support backdrop filters as of 12/01/2021. */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .firefoxOverlayFix {
+    @apply bg-black bg-opacity-30 p-8 rounded-md;
+  }
+}
+</style>
