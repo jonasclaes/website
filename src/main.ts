@@ -13,6 +13,7 @@ import {
   faInstagram,
   faLaravel,
   faTwitter,
+  faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAward,
@@ -47,7 +48,8 @@ library.add(
   faClock,
   faPaintRoller,
   faAward,
-  faBox
+  faBox,
+  faVuejs
 );
 
 createApp(App)

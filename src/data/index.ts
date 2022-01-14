@@ -95,6 +95,19 @@ const data: { projects: Projects } = {
       coverBackgroundFill: "#e84e36",
       status: ProjectStatus.IN_PROGRESS,
     },
+    {
+      slug: "jonas-claes-website",
+      name: "Jonas Claes",
+      description: "Website/portfolio",
+      cover: require("@/assets/projects/jonas-claes-be.jpg"),
+      coverBackgroundFill: "#23547c",
+      status: ProjectStatus.FINISHED,
+      date: new Date("2022-01-14T12:00:00.000Z"),
+      content: () =>
+        import("@/data/content/jonas-claes-website.vue").then(
+          (res) => res.default
+        ),
+    },
   ],
 };
 
