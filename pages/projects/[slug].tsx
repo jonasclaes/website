@@ -53,7 +53,7 @@ const Project: NextPage<Props> = ({ children, projectData }) => {
                         <p className='text-md'>{projectData.date}</p>
                     </div>
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml || "" }} className={styles.post} id="post"></div>
+                <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml || "" }} className={styles.post}></div>
             </main>
         </Layout>
     )
