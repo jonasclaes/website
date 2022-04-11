@@ -1,11 +1,10 @@
 module.exports = {
   content: [
-    "./public/**/*.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "./src/**/*.html",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-};
+}
