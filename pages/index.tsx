@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <title>Home - jonasclaes.be</title>
       </Head>
 
-      <main className="min-h-screen h-full flex flex-col md:flex-row items-center justify-center space-y-12 md:space-x-12 text-center md:text-left pt-16 pb-8">
+      <main className="min-h-screen h-full flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left pt-16 pb-8">
         <div>
           <h1 className="text-3xl md:text-6xl font-bold">
             Hello!<br />I'm Jonas Claes.

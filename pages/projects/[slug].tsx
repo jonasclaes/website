@@ -36,7 +36,7 @@ const Project: NextPage<Props> = ({ children, projectData }) => {
                 <title>{projectData.title} - jonasclaes.be</title>
             </Head>
 
-            <main className="min-h-screen h-full flex flex-col items-center justify-center space-y-4 text-left pt-16 pb-8">
+            <main className="min-h-screen h-full flex flex-col items-center justify-center gap-4 text-left pt-16 pb-8">
                 <h1 className='text-6xl font-bold'>Project</h1>
                 <div className={"bg-gray-700 flex flex-col md:flex-row rounded-md shadow-md w-full"}>
                     <Image

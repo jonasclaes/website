@@ -26,9 +26,9 @@ const Projects: NextPage<Props> = ({ children, allProjectsData }) => {
                 <title>Projects - jonasclaes.be</title>
             </Head>
 
-            <main className="min-h-screen h-full flex flex-col items-center justify-center space-y-4 text-left pt-16 pb-8">
+            <main className="min-h-screen h-full flex flex-col items-center justify-center gap-4 text-left pt-16 pb-8">
                 <h1 className='text-6xl font-bold'>Projects</h1>
-                <ul className='space-y-4 w-full'>
+                <ul className='flex flex-col gap-4 w-full'>
                     {allProjectsData.map(({ slug, date, title, client, image }) => (
                         <Link href={`/projects/${slug}`} key={slug}>
                             <li className={"bg-gray-700 flex flex-col md:flex-row rounded-md shadow-md hover:scale-105 transform transition-all duration-300 cursor-pointer"}>

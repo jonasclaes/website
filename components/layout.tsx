@@ -29,9 +29,11 @@ const Layout: NextComponentType = ({ children }) => {
                                     </Link>
                                 </li>
                                 <li className={`hover:text-blue-500 transition-colors duration-300 ${router.pathname == "/contact" ? "border-b-2 border-white" : ""}`}>
-                                    <a href='#'>
-                                        contact
-                                    </a>
+                                    <Link href='/contact'>
+                                        <a>
+                                            contact
+                                        </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>
