@@ -1,0 +1,27 @@
+.post h1 {
+    @apply text-4xl font-bold;
+}
+
+.post h2 {
+    @apply text-3xl font-bold;
+}
+
+.post h3 {
+    @apply text-2xl font-bold;
+}
+
+.post h4 {
+    @apply text-xl font-bold;
+}
+
+.post p {
+    @apply pb-4;
+}
+
+.post a {
+    @apply text-blue-500;
+}
+
+.post blockquote {
+    @apply border-l-8 border-blue-800 px-6 py-3 mb-4;
+}
