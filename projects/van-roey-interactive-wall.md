@@ -1,8 +1,8 @@
 ---
-title: 'Interactive Wall'
-client: 'Van Roey'
-date: '2021-05-31'
-image: '/images/projects/van-roey.jpg'
+title: "Interactive Wall"
+client: "Van Roey"
+date: "2021-05-31"
+image: "/images/projects/van-roey.jpg"
 ---
 
 ## Wat is de Interactive Wall?
@@ -34,9 +34,9 @@ Indien u meer zou willen weten over dit project, aarzel dan niet om contact op t
 **Website:** [jonasclaes.be](https://jonasclaes.be)  
 **Twitter:** [@jonasclaesbe](https://twitter.com/jonasclaesbe)  
 **GitHub:** [@jonasclaes](https://github.com/jonasclaes)  
-**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)  
+**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)
 
 ### Dirk Mervis
 
 **E-mail:** [dirk.mervis@thomasmore.be](mailto:dirk.mervis@thomasmore.be)  
-**Telefonisch:** [+32 14 80 61 67](tel:+3214806167)  
+**Telefonisch:** [+32 14 80 61 67](tel:+3214806167)

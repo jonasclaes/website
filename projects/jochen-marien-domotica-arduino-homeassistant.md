@@ -1,8 +1,8 @@
 ---
-title: 'Domotica met Arduino en Home Assistant'
-client: 'Jochen Mariën'
-date: '2022-01-11'
-image: '/images/projects/thomas-more.jpg'
+title: "Domotica met Arduino en Home Assistant"
+client: "Jochen Mariën"
+date: "2022-01-11"
+image: "/images/projects/thomas-more.jpg"
 ---
 
 ## Domotica met Arduino en Home Assistant
@@ -36,9 +36,9 @@ Indien u meer zou willen weten over dit project, aarzel dan niet om contact op t
 **Website:** [jonasclaes.be](https://jonasclaes.be)  
 **Twitter:** [@jonasclaesbe](https://twitter.com/jonasclaesbe)  
 **GitHub:** [@jonasclaes](https://github.com/jonasclaes)  
-**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)  
+**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)
 
 ### Jochen Mariën
 
 **E-mail:** [jochen.marien@thomasmore.be](mailto:jochen.marien@thomasmore.be)  
-**Telefonisch:** [+32 14 74 05 81](tel:+3214740581)  
+**Telefonisch:** [+32 14 74 05 81](tel:+3214740581)

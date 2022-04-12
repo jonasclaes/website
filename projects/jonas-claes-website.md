@@ -1,8 +1,8 @@
 ---
-title: 'Website'
-client: 'Jonas Claes'
+title: "Website"
+client: "Jonas Claes"
 # date: '2021-01-01'
-image: '/images/projects/jonas-claes-be.jpg'
+image: "/images/projects/jonas-claes-be.jpg"
 ---
 
 ## Tech stack
@@ -26,4 +26,4 @@ Indien u meer zou willen weten over dit project, aarzel dan niet om contact op t
 **Website:** [jonasclaes.be](https://jonasclaes.be)  
 **Twitter:** [@jonasclaesbe](https://twitter.com/jonasclaesbe)  
 **GitHub:** [@jonasclaes](https://github.com/jonasclaes)  
-**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)  
+**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)

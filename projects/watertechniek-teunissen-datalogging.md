@@ -1,8 +1,8 @@
 ---
-title: 'Datalogging Pompenstand'
-client: 'Watertechniek Teunissen'
-date: '2020-06-30'
-image: '/images/projects/watertechniek-teunissen.jpg'
+title: "Datalogging Pompenstand"
+client: "Watertechniek Teunissen"
+date: "2020-06-30"
+image: "/images/projects/watertechniek-teunissen.jpg"
 ---
 
 ## Wat is de datalogging voor Watertechniek Teunissen?
@@ -36,4 +36,4 @@ Indien u meer zou willen weten over dit project, aarzel dan niet om contact op t
 **Website:** [jonasclaes.be](https://jonasclaes.be)  
 **Twitter:** [@jonasclaesbe](https://twitter.com/jonasclaesbe)  
 **GitHub:** [@jonasclaes](https://github.com/jonasclaes)  
-**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)  
+**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)

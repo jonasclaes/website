@@ -1,8 +1,8 @@
 ---
-title: 'Discord Bot'
-client: 'Friendship Bubble'
+title: "Discord Bot"
+client: "Friendship Bubble"
 # date: '2021-01-01'
-image: '/images/projects/friendship-bubble.jpg'
+image: "/images/projects/friendship-bubble.jpg"
 ---
 
 ## Wat is de Friendship Bubble Discord Bot?
@@ -44,7 +44,7 @@ samenwerking.
 > uitgelegd. Mijn server is een community van mensen die veel aan hun
 > mentale en lichamelijke gezondheid werkt en hij heeft een bot gemaakt
 > die allerlei tips geeft en opbeurende dingen zegt.
-> 
+>
 > Soms heb ik een idee voor een nieuw commando voor de bot en dan denk ik
 > “nou dat zou wel niet kunnen, dat is zo specifiek” en elke keer zegt hij
 > terug: Geef me een paar dagen, dan is het geregeld! Verder heeft hij ook
@@ -52,11 +52,11 @@ samenwerking.
 > manier die voor mij overzichtelijk is. Alle code enzo snap ik niks van,
 > dus hij heeft er veel tijd in gestopt om de website zo te maken dat ik
 > begrijp wat ik doe en wat de gevolgen daarvan zijn.
-> 
+>
 > Kortom; als je geen verstand hebt van IT en denkt dat samenwerken met
 > een IT'er stressvol is omdat je er niks van snapt, bij Jonas is dat niet
 > het geval.
-> 
+>
 > **Geschreven door Lauri Giepmans**
 
 ## Contact
@@ -72,10 +72,10 @@ wijzen.
 **Website:** [jonasclaes.be](https://jonasclaes.be)  
 **Twitter:** [@jonasclaesbe](https://twitter.com/jonasclaesbe)  
 **GitHub:** [@jonasclaes](https://github.com/jonasclaes)  
-**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)  
+**Instagram:** [@jonasclaes.be](https://instagram.com/jonasclaes.be)
 
 ### Lauri Giepmans
 
 **E-mail:** [contact@laurigiepmans.nl](mailto:contact@laurigiepmans.nl)  
 **Instagram:** [@laurigiepmans](https://instagram.com/laurigiepmans)  
-**Website:** [laurigiepmans.nl](https://laurigiepmans.nl)  
+**Website:** [laurigiepmans.nl](https://laurigiepmans.nl)
