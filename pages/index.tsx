@@ -14,9 +14,9 @@ const Home: NextPage = () => {
       <main className="min-h-screen h-full flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left pt-16 pb-8">
         <div>
           <h1 className="text-3xl md:text-6xl font-bold">
-            Hello!<br />I'm Jonas Claes.
+            Hello!<br />I&apos;m Jonas Claes.
           </h1>
-          <p className='text-md md:text-3xl'>Software &amp; hardware engineer.</p>
+                <p className='text-md md:text-3xl'>Software &amp; hardware engineer.</p>
         </div>
         <div>
           <Image

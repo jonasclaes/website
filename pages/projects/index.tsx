@@ -30,7 +30,7 @@ const Projects: NextPage<Props> = ({ children, allProjectsData }) => {
                 <h1 className='text-6xl font-bold'>Projects</h1>
                 <ul className='flex flex-col gap-4 w-full'>
                     {allProjectsData.map(({ slug, date, title, client, image }) => (
-                        <Link href={`/projects/${slug}`} key={slug}>
+                        <Link href={`/projects/${slug}`} key={slug} passHref>
                             <li className={"bg-gray-700 flex flex-col md:flex-row rounded-md shadow-md hover:scale-105 transform transition-all duration-300 cursor-pointer"}>
                                 <Image
                                     src={image || "/images/project-cover-not-found.jpg"}

@@ -57,7 +57,7 @@ const Home: NextPage = () => {
 
             <main className="min-h-screen h-full flex flex-col items-center justify-center gap-2 text-center pt-16">
                 <h1 className="text-3xl md:text-6xl font-bold">
-                    Let's get in touch
+                    Let&apos;s get in touch
                 </h1>
                 <p className='text-xl md:text-3xl'>I would love to hear from you!</p>
             </main>
@@ -67,8 +67,8 @@ const Home: NextPage = () => {
                     <h2 className='text-xl md:text-3xl font-bold'>My contact information</h2>
                     <p><strong>E-mail:</strong> <a href="mailto:jonas@jonasclaes.be" className='text-blue-500'>jonas@jonasclaes.be</a></p>
                     <p><strong>Telephone:</strong> <a href="tel:+32484238902" className='text-blue-500'>+32 484 23 89 02</a></p>
-                    <p><strong>Twitter:</strong> <a href="https://twitter.com/jonasclaesbe" className='text-blue-500' target={"_blank"}>@jonasclaesbe</a></p>
-                    <p><strong>GitHub:</strong> <a href="https://github.com/jonasclaes" className='text-blue-500' target={"_blank"}>@jonasclaes</a></p>
+                    <p><strong>Twitter:</strong> <a href="https://twitter.com/jonasclaesbe" className='text-blue-500' target={"_blank"} rel={"noreferrer"}>@jonasclaesbe</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/jonasclaes" className='text-blue-500' target={"_blank"} rel={"noreferrer"}>@jonasclaes</a></p>
                 </div>
                 <div>
                     <h2 className='text-xl md:text-3xl font-bold'>Contact form</h2>
