@@ -42,7 +42,7 @@ const Project: NextPage<Props> = ({ children, projectData }) => {
       </Head>
 
       <main className="flex h-full min-h-screen flex-col items-center justify-center gap-4 pt-16 pb-8 text-left">
-        <h1 className="text-6xl font-bold">Project</h1>
+        <h1 className="text-6xl font-bold">Project: {projectData.title}</h1>
         <div
           className={
             "flex w-full flex-col rounded-md bg-gray-700 shadow-md md:flex-row"
@@ -59,7 +59,7 @@ const Project: NextPage<Props> = ({ children, projectData }) => {
           <div className="w-2/3 p-4">
             <p className="text-xl">{projectData.client}</p>
             <h2 className="text-3xl font-bold">{projectData.title}</h2>
-            <p className="text-md">{projectData.date}</p>
+            <p className="text-md">{projectData.date ? new Date(projectData.date).toLocaleDateString('nl-BE', { dateStyle: "long" }) : ""}</p>
           </div>
         </div>
         <div
