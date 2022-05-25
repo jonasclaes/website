@@ -19,7 +19,7 @@
 }
 
 .post p {
-  @apply pb-4;
+  @apply pb-4 text-justify;
 }
 
 .post a {
@@ -28,4 +28,12 @@
 
 .post blockquote {
   @apply mb-4 border-l-8 border-blue-800 px-6 py-3;
+}
+
+.post ul {
+  @apply pb-4 ml-6 list-disc;
+}
+
+.post li > ul {
+  @apply pb-0;
 }
