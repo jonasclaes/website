@@ -1,21 +1,21 @@
 .post {
-  @apply w-full;
+  @apply w-full text-sm sm:text-base;
 }
 
 .post h1 {
-  @apply text-4xl font-bold;
+  @apply text-xl sm:text-4xl font-bold;
 }
 
 .post h2 {
-  @apply text-3xl font-bold;
+  @apply text-lg sm:text-3xl font-bold;
 }
 
 .post h3 {
-  @apply text-2xl font-bold;
+  @apply text-base sm:text-2xl font-bold;
 }
 
 .post h4 {
-  @apply text-xl font-bold;
+  @apply text-sm sm:text-xl font-bold;
 }
 
 .post p {

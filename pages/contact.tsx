@@ -55,7 +55,7 @@ const Home: NextPage = () => {
         <title>Home - jonasclaes.be</title>
       </Head>
 
-      <main className="flex h-full min-h-screen flex-col items-center justify-center gap-2 pt-16 text-center">
+      <main className="flex h-full min-h-screen flex-col items-center justify-center gap-2 pt-24 text-center">
         <h1 className="text-3xl font-bold md:text-6xl">
           Let&apos;s get in touch
         </h1>

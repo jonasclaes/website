@@ -41,27 +41,21 @@ const Project: NextPage<Props> = ({ children, projectData }) => {
         <title>{projectData.title} - jonasclaes.be</title>
       </Head>
 
-      <main className="flex h-full min-h-screen flex-col items-center justify-center gap-4 pt-16 pb-8 text-left">
-        <h1 className="text-6xl font-bold">Project: {projectData.title}</h1>
-        <div
-          className={
-            "flex w-full flex-col rounded-md bg-gray-700 shadow-md md:flex-row"
-          }
-        >
-          <Image
-            src={projectData.image || "/images/project-cover-not-found.jpg"}
-            height={100}
-            width={200}
-            alt={projectData.client}
-            objectFit="cover"
-            className="rounded-t-md md:rounded-l-md md:rounded-tr-none"
-          />
-          <div className="w-2/3 p-4">
-            <p className="text-xl">{projectData.client}</p>
-            <h2 className="text-3xl font-bold">{projectData.title}</h2>
-            <p className="text-md">{projectData.date ? new Date(projectData.date).toLocaleDateString('nl-BE', { dateStyle: "long" }) : ""}</p>
-          </div>
+      <main className="h-full min-h-screen grid grid-cols-1 gap-4 pt-24 pb-8 text-left">
+        <div>
+          <h1 className="text-xl sm:text-3xl md:text-6xl font-bold break-words">{projectData.title}</h1>
+          <h2 className="text-lg sm:text-xl md:text-3xl font-bold">{projectData.client}</h2>
+          {projectData.finished && <p className="text-md sm:text-lg md:text-xl opacity-50">{ new Date(projectData.date).toLocaleDateString('nl-BE', { dateStyle: "long" })}</p>}
         </div>
+        <Image
+          src={projectData.image || "/images/project-cover-not-found.jpg"}
+          width={600}
+          height={300}
+          layout="responsive"
+          alt={projectData.client}
+          objectFit="cover"
+          className="rounded-t-md md:rounded-l-md md:rounded-tr-none"
+        />
         <div
           dangerouslySetInnerHTML={{ __html: projectData.contentHtml || "" }}
           className={styles.post}
