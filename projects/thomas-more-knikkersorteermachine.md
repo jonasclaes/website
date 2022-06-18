@@ -2,7 +2,7 @@
 title: "Knikkersorteermachine"
 client: "Thomas More"
 date: "2022-05-24"
-image: "/images/projects/thomas-more.jpg"
+image: "/images/projects/thomas-more-knikkersorteermachine.jpg"
 finished: true
 ---
 
