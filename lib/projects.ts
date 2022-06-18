@@ -10,9 +10,10 @@ export type ProjectEntry = {
   slug: string;
   title: string;
   client?: string;
-  date?: string;
-  image?: string;
-  contentHtml?: string;
+  date: string;
+  image: string;
+  contentHtml: string;
+  finished: boolean;
 };
 
 export const getSortedProjectsData = () => {
@@ -39,8 +40,7 @@ export const getSortedProjectsData = () => {
   );
 
   // Sort projects by date
-  // @ts-ignore
-  return allProjectsData.sort((a: { date }, b: { date }) => {
+  return allProjectsData.sort((a, b) => {
     const dateA = Date.parse(a.date) || Date.now();
     const dateB = Date.parse(b.date) || Date.now();
 

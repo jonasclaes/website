@@ -29,7 +29,7 @@ const Projects: NextPage<Props> = ({ children, allProjectsData }) => {
       <main className="flex h-full min-h-screen flex-col items-center justify-center gap-4 pt-16 pb-8 text-left">
         <h1 className="text-6xl font-bold">Projects</h1>
         <ul className="flex w-full flex-col gap-4">
-          {allProjectsData.map(({ slug, date, title, client, image }) => (
+          {allProjectsData.map(({ slug, date, title, client, image, finished }) => (
             <Link href={`/projects/${slug}`} key={slug} passHref>
               <li
                 className={
@@ -47,7 +47,7 @@ const Projects: NextPage<Props> = ({ children, allProjectsData }) => {
                 <div className="w-2/3 p-4">
                   <p className="text-xl">{client}</p>
                   <h2 className="text-3xl font-bold">{title}</h2>
-                  <p className="text-md">{date ? new Date(date).toLocaleDateString('nl-BE', { dateStyle: "long" }) : ""}</p>
+                  <p className="text-md">{date && finished ? new Date(date).toLocaleDateString('nl-BE', { dateStyle: "long" }) : ""}</p>
                 </div>
               </li>
             </Link>

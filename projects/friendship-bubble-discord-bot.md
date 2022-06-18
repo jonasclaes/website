@@ -1,8 +1,9 @@
 ---
 title: "Discord Bot"
 client: "Friendship Bubble"
-# date: '2021-01-01'
+date: '2022-05-01'
 image: "/images/projects/friendship-bubble.jpg"
+finished: true
 ---
 
 ## Wat is de Friendship Bubble Discord Bot?
@@ -58,6 +59,10 @@ samenwerking.
 > het geval.
 >
 > **Geschreven door Lauri Giepmans**
+
+## Update 18-06-2022
+
+De bot bestaat ondertussen onder de naam "Botivater" en wordt gebruikt in meerdere servers. U kan <a href="/projects/botivater-discord-bot">hier</a> het nieuwe project vinden.
 
 ## Contact
 

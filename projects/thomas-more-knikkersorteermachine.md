@@ -3,6 +3,7 @@ title: "Knikkersorteermachine"
 client: "Thomas More"
 date: "2022-05-24"
 image: "/images/projects/thomas-more.jpg"
+finished: true
 ---
 
 ## Wat is de knikkersorteermachine?

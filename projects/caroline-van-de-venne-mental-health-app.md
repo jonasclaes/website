@@ -1,20 +1,16 @@
 ---
-title: "Website"
-client: "Jonas Claes"
-date: '2021-06-18'
-image: "/images/projects/jonas-claes-be.jpg"
-finished: true
+title: "Mental Health App"
+client: "Caroline Van De Venne"
+date: "2022-06-22"
+image: "/images/projects/mental-health-app.jpg"
+finished: false
 ---
 
-## Tech stack
+## Wat is de Mental Health App?
 
-Deze website is volledig gebouwd met NextJS en Tailwind CSS.
-
-Daarnaast worden alle projecten dynamisch ingeladen, zo wordt de bundle size klein gehouden en de laadtijden snel.
-
-## Hosting
-
-De site wordt gehost door Vercel en wordt automatisch gebuild wanneer er een nieuwe commit is op de master branch op GitHub.
+De mental health app is een mobiele applicatie gebouwd met Flutter om gebruikers te helpen
+met hun mentale gezondheid. Dit project staat op dit moment onder NDA, waardoor de informatie
+die hier te vinden is, gelimiteerd is.
 
 ## Contact
 

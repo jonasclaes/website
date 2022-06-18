@@ -3,6 +3,7 @@ title: "Smart Documentation System"
 client: "Delta Technics"
 date: "2021-12-24"
 image: "/images/projects/delta-technics.jpg"
+finished: true
 ---
 
 ## Wat is het smart documentation system?

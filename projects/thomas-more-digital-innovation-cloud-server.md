@@ -3,6 +3,7 @@ title: "Digital Innovation Cloud Server"
 client: "Thomas More"
 date: "2022-01-11"
 image: "/images/projects/thomas-more.jpg"
+finished: true
 ---
 
 ## Wat is de Digital Innovation Cloud Server?

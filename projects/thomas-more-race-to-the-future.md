@@ -3,6 +3,7 @@ title: "Race To The Future"
 client: "Thomas More"
 date: "2022-05-13"
 image: "/images/projects/race-to-the-future.jpg"
+finished: true
 ---
 
 ## Wat is "Race To The Future"?
@@ -26,7 +27,7 @@ De racewagen wordt standaard geleverd door PXL met volgende componenten in de do
 - Raspberry Pi 4B 4GB
   - 32 GB SD kaart
 - Arduino Pro Micro
-- USB <> Micro USB-kabel
+- USB <--> Micro USB-kabel
 - Adafruit PCA9685 16-kanaals PWM module
 - Buck-Boost converter
 - Dupont-draden
@@ -66,6 +67,10 @@ Maar deze effort was jammer genoeg teniet gedaan door de aanwezige kortsluiting,
 Hierna hebben we de handoek in de ring gegooid en zijn we gaan netwerken met de verschillende aanwezige bedrijven en scholieren.
 Dit was achteraf gezien heel erg waardevol aangezien we alle 3 meteen een stageplaats aangeboden hebben gekregen bij Eurofins Digital Testing.
 
+## Hardware diagnose
+
+Na de race, tussen de examens door, hebben we de auto component per component individueel bekeken, uitgemeten en getest. Hierna zijn we erachter gekomen dat de buck-boost converter gefaald heeft doordat de spanningsregeling langzaam omhoog is verschoven. Dit heeft uiteindelijk een voedingsspanning van 7.2 volt geleverd aan een 5 volt Raspberry Pi, wat ultiem de doodsteek was voor de Raspberry Pi.
+
 ## Conclusie
 
 Editie 2023 zullen we sterker terug komen en we hebben nu al zicht op wat we willen veranderen tegen dan. We hebben van Eurofins Digital Testing ook enorm veel trainingsdata gekregen, waardoor we die editie 100% op AI willen gaan rijden.
@@ -86,8 +91,20 @@ Indien u meer zou willen weten over dit project, aarzel dan niet om contact op t
 
 ### Thierry Eeman
 
+Collega student  
 **E-mail:** [thierry.eeman@student.thomasmore.be](mailto:thierry.eeman@student.thomasmore.be)  
 
 ### Frederik Gielis
 
+Collega student  
 **E-mail:** [frederik.gielis@student.thomasmore.be](mailto:frederik.gielis@student.thomasmore.be)  
+
+### Jochen Marien
+
+Coach  
+**E-mail:** [jochen.marien@thomasmore.be](mailto:jochen.marien@thomasmore.be)
+
+### Bram Heyns
+
+Leerkracht AI & Project owner  
+**E-mail:** [bram.heyns@thomasmore.be](mailto:bram.heyns@thomasmore.be)

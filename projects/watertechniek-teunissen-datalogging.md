@@ -3,6 +3,7 @@ title: "Datalogging Pompenstand"
 client: "Watertechniek Teunissen"
 date: "2020-06-30"
 image: "/images/projects/watertechniek-teunissen.jpg"
+finished: true
 ---
 
 ## Wat is de datalogging voor Watertechniek Teunissen?

@@ -3,6 +3,7 @@ title: "Domotica met Arduino en Home Assistant"
 client: "Jochen Mariën"
 date: "2022-01-11"
 image: "/images/projects/thomas-more.jpg"
+finished: true
 ---
 
 ## Domotica met Arduino en Home Assistant

@@ -3,6 +3,7 @@ title: "Interactive Wall"
 client: "Van Roey"
 date: "2021-05-31"
 image: "/images/projects/van-roey.jpg"
+finished: true
 ---
 
 ## Wat is de Interactive Wall?
