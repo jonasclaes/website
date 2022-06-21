@@ -46,6 +46,10 @@ Tijdens het ontwikkelen van het project kregen wij het idee dat dit een toepassi
 
 De GitHub repository kan u hier vinden: <a href="https://github.com/jonasclaes/smart-documentation-system" target="_blank" rel="noreferrer">jonasclaes/smart-documentation-system</a>
 
+## Downloads
+
+- <a href="https://static.jonasclaes.be/projects/project-art/smart-documentation-system.png" target="_blank" rel="noreferrer">Project poster</a>
+
 ## Contact
 
 Indien u meer zou willen weten over dit project, aarzel dan niet om contact op te nemen met mij of Thierry Eeman op één van onderstaande wijzen.
