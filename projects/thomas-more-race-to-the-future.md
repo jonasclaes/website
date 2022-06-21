@@ -76,6 +76,10 @@ Na de race, tussen de examens door, hebben we de auto component per component in
 Editie 2023 zullen we sterker terug komen en we hebben nu al zicht op wat we willen veranderen tegen dan. We hebben van Eurofins Digital Testing ook enorm veel trainingsdata gekregen, waardoor we die editie 100% op AI willen gaan rijden.
 Ook zullen we enkele hardware aanpassingen maken die een betere totaalwerking zou moeten garanderen.
 
+## Downloads
+
+- <a href="https://static.jonasclaes.be/projects/project-art/race-to-the-future.png" target="_blank" rel="noreferrer">Project poster</a>
+
 ## Contact
 
 Indien u meer zou willen weten over dit project, aarzel dan niet om contact op te nemen met mij of mijn collega-studenten op één van onderstaande wijzen.

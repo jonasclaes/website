@@ -49,6 +49,10 @@ Je kan de library hier vinden: <a href="https://pypi.org/project/knikkersorteerm
 
 GitHub repository met alle code: <a href="https://github.com/Thomas-More-Digital-Innovation/1-015-knikkersorteermachine" target="_blank" rel="noreferrer">Thomas-More-Digital-Innovation/1-015-knikkersorteermachine</a>
 
+## Downloads
+
+- <a href="https://static.jonasclaes.be/projects/project-art/knikkersorteermachine.png" target="_blank" rel="noreferrer">Project poster</a>
+
 ## Contact
 
 Indien u meer zou willen weten over dit project, aarzel dan niet om contact op te nemen met mij op één van onderstaande wijzen.

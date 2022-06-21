@@ -12,6 +12,10 @@ De mental health app is een mobiele applicatie gebouwd met Flutter om gebruikers
 met hun mentale gezondheid. Dit project staat op dit moment onder NDA, waardoor de informatie
 die hier te vinden is, gelimiteerd is.
 
+## Downloads
+
+- <a href="https://static.jonasclaes.be/projects/project-art/mental-health-app.png" target="_blank" rel="noreferrer">Project poster</a>
+
 ## Contact
 
 Indien u meer zou willen weten over dit project, aarzel dan niet om contact op te nemen met mij op één van onderstaande wijzen.
